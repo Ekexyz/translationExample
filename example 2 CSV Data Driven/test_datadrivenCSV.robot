@@ -5,7 +5,7 @@ Library                    QWeb
 Library                    DataDriver                  file=test-data.csv          #include=tagtoinclude       exclude=tagtoexclude
 Suite Setup                Open Browser                about:blank                 chrome
 Suite Teardown             Close All Browsers
-Resource                   ../keywords.robot
+Resource                  ../resources/keywords.robot
 Test Template              Test location search
 
 
