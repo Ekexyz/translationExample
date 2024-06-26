@@ -20,8 +20,8 @@ uat =  {'URL': 'https://www.airbnb.com/',
 def get_variables(env):
     if env == 'NL':
         return NL
-    elif env == 'uat':
-        return uat
+    elif env == 'ENG':
+        return ENG
     else:
         # default variables
         return NL
