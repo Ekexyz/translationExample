@@ -10,8 +10,10 @@ Resource    keywords.robot
 
 *** Test Cases ***
 
+#VARIANT 1 Where the test cases are still calling keywords so if a extra step is added Two test cases need to be adjusted
 
-Test the home page in DUTCH
+
+Test location search in DUTCH variant1
     [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
     Import Variables	${CURDIR}/variables.py    NL
     GoTo                ${URL}
@@ -19,7 +21,7 @@ Test the home page in DUTCH
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}                   
 
-Test the home page in ENGLISH
+Test location search in ENGLISH variant1
     [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
     Import Variables	${CURDIR}/variables.py    ENG
     GoTo                ${URL}
@@ -27,20 +29,21 @@ Test the home page in ENGLISH
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}     
 
-# *** Keywords ***
-# Close cookies
-#     ${cooies_open}=    Run Keyword And Return Status    VerifyText    ${cookies_Text}
-#     IF                 ${cooies_open}
-#         ClickText     ${cookies_Button}     partial_match=False
-#     END
+#VARIANT 2 Test cases are calling keyword with all test steps test case will only import variables to load language
+Test location search in DUTCH variant2
+    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+    Import Variables	${CURDIR}/variables.py    NL
+    Test location search                  
 
-# Search Accomodation
-#     [Arguments]    ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
-#     ClickText    ${destination_field_Label}
-#     TypeText   ${destination_field_Label}    ${destination_field_Value}    
-#     ClickText           ${click_destination_Text}
-#     ClickText           ${search_Button}
+Test location search in ENGLISH variant2
+    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+    Import Variables	${CURDIR}/variables.py    ENG
+    Test location search  
 
-# Verify Results
-#     [Arguments]    ${result_Text}
-#     VerifyText   ${result_Text}
+
+*** Keywords ***
+Test location search
+    GoTo                ${URL}
+    Close cookies
+    Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
+    Verify Results     ${result_Text}  
