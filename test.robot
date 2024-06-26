@@ -16,7 +16,7 @@ Test the home page in DUTCH
     GoTo                ${URL}
     Close cookies
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
-    Verify Results                        
+    Verify Results     ${result_Text}                   
 
 
 
@@ -24,7 +24,7 @@ Test the home page in DUTCH
 Close cookies
     ${cooies_open}=    isText    ${cookies_Text}
     IF                 ${cooies_open}
-        ClickText     ${cookies_Button} 
+        ClickText     ${cookies_Button}     partial_match=False
     END
 
 Search Accomodation
