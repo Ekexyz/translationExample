@@ -1,5 +1,5 @@
 NL = {'URL': 'https://www.airbnb.nl/',
-    'URL': 'https://www.airbnb.nl/'}
+    'test': 'https://www.airbnb.nl/'}
 
 uat = {'scalar' : 'Some other value',
               'LIST__list': ['Some','other','value'],
