@@ -14,7 +14,7 @@ Resource    keywords.robot
 
 
 Test location search in DUTCH variant1
-    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+
     Import Variables	${CURDIR}/variables.py    NL
     GoTo                ${URL}
     Close cookies
@@ -22,7 +22,7 @@ Test location search in DUTCH variant1
     Verify Results     ${result_Text}                   
 
 Test location search in ENGLISH variant1
-    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+
     Import Variables	${CURDIR}/variables.py    ENG
     GoTo                ${URL}
     Close cookies
@@ -30,13 +30,14 @@ Test location search in ENGLISH variant1
     Verify Results     ${result_Text}     
 
 #VARIANT 2 Test cases are calling keyword with all test steps test case will only import variables to load language
+
 Test location search in DUTCH variant2
-    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+
     Import Variables	${CURDIR}/variables.py    NL
     Test location search                  
 
 Test location search in ENGLISH variant2
-    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+
     Import Variables	${CURDIR}/variables.py    ENG
     Test location search  
 
