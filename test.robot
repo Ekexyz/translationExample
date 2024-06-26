@@ -15,6 +15,7 @@ Test the home page in DUTCH
     Import Variables	${CURDIR}/variables.py    NL
     GoTo                ${URL}
     Close cookies
+    Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
 
 
 
@@ -25,3 +26,12 @@ Close cookies
     IF                 ${cooies_open}
         ClickText     ${cookies_Button} 
     END
+
+Search Accomodation
+    [Arguments]    ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
+    ClickText    ${destination_field_Label}
+    TypeText   ${destination_field_Label}    ${destination_field_Value}    
+    ClickText           ${click_destination_Text}
+    ClickText           ${search_Button}
+
+Verify Results
