@@ -17,7 +17,7 @@ Test location search in DUTCH variant1
 
     Import Variables	${CURDIR}/variables.py    NL
     GoTo                ${URL}
-    Close cookies
+    Close cookies       ${cookies_Text}    ${cookies_Button}
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}                   
 
@@ -25,7 +25,7 @@ Test location search in ENGLISH variant1
 
     Import Variables	${CURDIR}/variables.py    ENG
     GoTo                ${URL}
-    Close cookies
+    Close cookies       ${cookies_Text}    ${cookies_Button}
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}     
 
@@ -45,6 +45,6 @@ Test location search in ENGLISH variant2
 *** Keywords ***
 Test location search
     GoTo                ${URL}
-    Close cookies
+    Close cookies       ${cookies_Text}    ${cookies_Button}
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}  
