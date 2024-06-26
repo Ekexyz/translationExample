@@ -16,7 +16,7 @@ Test the home page in DUTCH
     GoTo                ${URL}
     Close cookies
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
-
+    Verify Results                        
 
 
 
@@ -35,3 +35,5 @@ Search Accomodation
     ClickText           ${search_Button}
 
 Verify Results
+    [Arguments]    ${result_Text}
+    VerifyText   ${result_Text}
