@@ -8,7 +8,7 @@ NL = {'URL': 'https://www.airbnb.nl/',
     'result_Text': 'Meer dan 1000 accommodaties in Amsterdam' }
 
 
-uat =  {'URL': 'https://www.airbnb.com/',
+ENG =  {'URL': 'https://www.airbnb.com/',
     'cookies_Text': 'We gebruiken cookies',
     'cookies_Button': 'Oké',
     'destination_field_Label': 'Waar',
