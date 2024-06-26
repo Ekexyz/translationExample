@@ -5,6 +5,7 @@ Library                 QWeb
 
 *** Keywords ***
 Close cookies
+    [Arguments]    ${cookies_Text}    ${cookies_Button}
     ${cooies_open}=    Run Keyword And Return Status    VerifyText    ${cookies_Text}
     IF                 ${cooies_open}
         ClickText     ${cookies_Button}     partial_match=False
