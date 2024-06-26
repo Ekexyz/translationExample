@@ -18,7 +18,13 @@ Test the home page in DUTCH
     Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
     Verify Results     ${result_Text}                   
 
-
+Test the home page in ENGLISH
+    [Documentation]     Go to the web shop, and verify that the slogan text appears on the page.
+    Import Variables	${CURDIR}/variables.py    ENG
+    GoTo                ${URL}
+    Close cookies
+    Search Accomodation                        ${destination_field_Label}     ${destination_field_Value}    ${click_destination_Text}    ${search_Button}
+    Verify Results     ${result_Text}     
 
 *** Keywords ***
 Close cookies
