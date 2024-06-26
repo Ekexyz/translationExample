@@ -1,5 +1,7 @@
 NL = {'URL': 'https://www.airbnb.nl/',
-    'test': 'https://www.airbnb.nl/'}
+    'cookies_Text': 'We gebruiken cookies',
+    'cookies_Button': 'OkÃ©' }
+
 
 uat = {'scalar' : 'Some other value',
               'LIST__list': ['Some','other','value'],
