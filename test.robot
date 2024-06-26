@@ -22,7 +22,7 @@ Test the home page in DUTCH
 
 *** Keywords ***
 Close cookies
-    ${cooies_open}=    isText    ${cookies_Text}
+    ${cooies_open}=    Run Keyword And Return Status    VerifyText    ${cookies_Text}
     IF                 ${cooies_open}
         ClickText     ${cookies_Button}     partial_match=False
     END
