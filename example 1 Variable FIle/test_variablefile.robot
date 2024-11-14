@@ -9,7 +9,7 @@ Resource    ../resources/keywords.robot
 
 *** Test Cases ***
 
-#VARIANT 1 Where the test cases are still calling keywords so if a extra step is added Two test cases need to be adjusted
+#VARIANT 11 Where the test cases are still calling keywords so if a extra step is added Two test cases need to be adjusted
 
 
 Test location search in DUTCH variant1
