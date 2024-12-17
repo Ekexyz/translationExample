@@ -10,7 +10,7 @@ NL = {'URL': 'https://www.airbnb.nl/',
 
 ENG =  {'URL': 'https://www.airbnb.com/',
     'cookies_Text': 'We use cookies',
-    'cookies_Button': 'OK',
+    'cookies_Button': 'Accept all',
     'destination_field_Label': 'Where',
     'destination_field_Value': 'London',
     'click_destination_Text': 'London, United Kingdom',
