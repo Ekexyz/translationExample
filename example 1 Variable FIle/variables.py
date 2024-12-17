@@ -1,6 +1,6 @@
 NL = {'URL': 'https://www.airbnb.nl/',
     'cookies_Text': 'We gebruiken cookies',
-    'cookies_Button': 'Oké',
+    'cookies_Button': 'Alles accepteren',
     'destination_field_Label': 'Waar',
     'destination_field_Value': 'Amsterdam',
     'click_destination_Text': 'Amsterdam, Netherlands',
